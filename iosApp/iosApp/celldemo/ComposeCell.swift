@@ -31,8 +31,6 @@ class ComposeCell: UICollectionViewCell {
     }
         
     func integrateViewController(_ controller: UIViewController) {
-        controller.view.removeFromSuperview()
-        
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         
         // Old constraints will be removed automatically when controller.view is removed from superview during this call
