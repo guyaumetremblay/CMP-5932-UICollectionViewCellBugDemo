@@ -42,7 +42,7 @@ class CellDemoView : UIView {
             totalViewControllersAllocated += 1
             print("totalViewControllersAllocated: \(totalViewControllersAllocated)")
             
-            // It's incorrect to call this that way before the view is actually visible, but it's fine for now.
+            // It's incorrect to call this that way before the view is actually visible, but as a proof of concept - it's fine.
             newViewController.didMove(toParent: parentViewController)
             return newViewController
         }
