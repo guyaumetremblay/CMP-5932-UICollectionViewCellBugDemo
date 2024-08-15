@@ -12,10 +12,14 @@ class ComposeCell: UICollectionViewCell {
         contentView.backgroundColor = .gray
         
         // Constructor is called before `dequeue` happens, `parentViewController` is nil.
+        
 //        let controller = SharedCellViewControllerKt.SharedCellViewController()
 //        self.parentViewController?.addChild(controller)
 //        controller.view.frame = self.bounds
+        
         // Views should be added to `contentView` instead of `UICollectionViewCell` itself.
+        // see https://developer.apple.com/documentation/uikit/uicollectionviewcell/1620133-contentview
+        
 //        self.addSubview(controller.view)
 //        controller.didMove(toParent: self.parentViewController)
         
