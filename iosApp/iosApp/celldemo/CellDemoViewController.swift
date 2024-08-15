@@ -6,8 +6,10 @@ class CellDemoViewController: UIViewController {
     
     override func loadView() {
         let view = CellDemoView()
-        view.action = {
-            self.navigationController?.pushViewController(AnotherViewController(), animated: true)
+        
+        // Prevent another retain cycle
+        view.action = { [weak self] in
+            self?.navigationController?.pushViewController(AnotherViewController(), animated: true)
         }
         view.parentViewController = self
         self.view = view
